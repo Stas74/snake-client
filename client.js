@@ -19,8 +19,23 @@ const connect =  () => {
 
   conn.on('connect', () => {
     conn.write("Name: GMT");
-  });
+    /*
+    conn.write("Move: up");
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 50);   
 
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 50);
+    */
+    
+  });
+  /*
+  conn.on('data', (data) => {
+    conn.write("Move: up");
+  });  
+  */
   conn.on('data', (data) => {
     console.log(data.toString());
     conn.end();
